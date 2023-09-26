@@ -68,7 +68,7 @@
    &kp PSCRN &kp F1        &kp F2           &kp F3           &kp F4        &kp F5       &kp F6    &kp F7    &kp F8  &kp F9   &kp F10  &kp F11
    &kp LCAPS &kp LC(S)     &kp LC(LS(LBRC)) &kp LC(LS(RBRC)) &kp LC(BSLH)  &kp C_VOL_UP &trans    &kp MINUS &trans  &trans   &trans   &kp F12
    &trans    &kp LEFT      &kp LS(LEFT)     &kp LS(RIGHT)    &kp RIGHT     &kp C_VOL_DN &kp LC(Z) &kp EQUAL &trans  &trans   &trans   &to DEFAULT
-                           &kp LALT         &kp SPACE        &trans        &kp LC(C)    &kp LC(x) &kp LC(V)
+                           &kp LALT         &kp SPACE        &trans        &kp LC(C)    &kp LC(X) &kp LC(V)
                         >;
                 };
         };
