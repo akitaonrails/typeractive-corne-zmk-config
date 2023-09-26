@@ -14,36 +14,20 @@
 #define DAVINCI 3
 
 / {
-        behaviors {
-            td0: tap_dance_0 {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_0";
-                #binding-cells = <0>;
-                tapping-term-ms = <180>;
-                bindings = <&kp ESC>, , ,<&kp LALT>;
-            };
-            td1: tap_dance_1 {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_1";
-                #binding-cells = <0>;
-                tapping-term-ms = <180>;
-                bindings = <&kp LGUI>, <&kp LGUI>, ,<&kp LG(L)>, <&tog DAVINCI>;
-            };
-        };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  \   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | BKSP |  | SPC | RSE  | ENT |
+// |  TAB |  Q  |  W  |  E      |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  \   |
+// | CTRL |  A  |  S  |  D      |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C      |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | GUI  |
+//                    | ESC/ALT | LWR | BKSP |  | SPC | RSE  | ENT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp td1
-                   &kp td0 &mo 1 &kp BKSP    &kp SPACE &mo 2 &kp RET
+   &kp TAB   &kp Q &kp W        &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+   &kp LCTRL &kp A &kp S        &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X        &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp LGUI 
+                   &mt ESC LALT &mo 1 &kp BKSP    &kp SPACE &mo 2 &kp RET
                         >;
                 };
                 lower_layer {
@@ -55,7 +39,7 @@
                         bindings = <
    &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4    &kp N5        &kp N6   &kp N7   &kp N8        &kp N9      &kp N0       &kp DEL
    &bt SPACE  &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(E) &kp PG_UP     &kp LEFT &kp DOWN &kp UP        &kp RIGHT   &kp LS(SEMI) &kp LS(SQT)
-   &kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V) &kp PG_DN     &kp HOME &kp END  &kp LS(COMMA) &kp LS(DOT) &kp LS(FSLH) &kp LG(LS(S))
+   &kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V) &kp PG_DN     &kp HOME &kp END  &kp LS(COMMA) &kp LS(DOT) &kp LS(FSLH) &TO DAVINCI
                          &kp trans  &trans     &kp trans &kp LG(SPACE) &trans   &kp LS(RET)
                         >;
                 };
@@ -81,9 +65,9 @@
 // |        |LEFT | LS(LEFT)   |  LS(RIGHT) | RIGHT  |VOL_DN|LC(Z)|      |      |      |      | TO(1)|
 //                             |  LALT      | SPACE  |      |LC(C)|LC(X) |LC(V) | 
                         bindings = <
-   &kp ESC   &kp F1        &kp F2           &kp F3           &kp F4        &kp F5       &kp F6    &kp F7    &kp F8  &kp F9   &kp F10  &kp F11
-   &kp LCAPS &kp LC(S)     &kp LC(LS(LBRC)) &kp LC(LS(RBRC)) &kp LC(BSLH)  &kp K_VOL_UP &trans    &kp MINUS &trans  &trans   &trans   &kp F12
-   &trans    &kp LEFT      &kp LS(LEFT)     &kp LS(RIGHT)    &kp RIGHT     &kp K_VOL_DN &kp LC(Z) &kp EQUAL &trans  &trans   &trans   &to DEFAULT
+   &kp PSCRN &kp F1        &kp F2           &kp F3           &kp F4        &kp F5       &kp F6    &kp F7    &kp F8  &kp F9   &kp F10  &kp F11
+   &kp LCAPS &kp LC(S)     &kp LC(LS(LBRC)) &kp LC(LS(RBRC)) &kp LC(BSLH)  &kp C_VOL_UP &trans    &kp MINUS &trans  &trans   &trans   &kp F12
+   &trans    &kp LEFT      &kp LS(LEFT)     &kp LS(RIGHT)    &kp RIGHT     &kp C_VOL_DN &kp LC(Z) &kp EQUAL &trans  &trans   &trans   &to DEFAULT
                            &kp LALT         &kp SPACE        &trans        &kp LC(C)    &kp LC(x) &kp LC(V)
                         >;
                 };
