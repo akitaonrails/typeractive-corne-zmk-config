@@ -11,6 +11,7 @@
 #define LOWER   1
 #define RAISE   2
 #define DAVINCI 3
+#define GAME    4
 
 / {
     keymap {
@@ -48,15 +49,15 @@
 
         raise_layer {
             // ------------------------------------------------------------------------------------------
-            // |  ESC  |  !      |  @  |  #  |  $    |   %    |    |  ^  |  &  |  *  |  (  |  )  | LNLCK |
-            // |  LCAPS|         |     |  `  |  ~    | VOL_UP |    |  +  |  -  |  [  |  ]  |  \  | PS    |
-            // |       |LC(LS(Z))|     |  ^  |       | VOL_DN |    |  _  |  =  |  {  |  }  | "|" |       |
+            // |  ESC  |  !      |  @  |  #  |  $    |   %    |    |  ^  |  &  |  *  |  (  |  )  | LNLCK   |
+            // |  LCAPS|         |     |  `  |  ~    | VOL_UP |    |  +  |  -  |  [  |  ]  |  \  | PS      |
+            // |       |LC(LS(Z))|     |  ^  |       | VOL_DN |    |  _  |  =  |  {  |  }  | "|" | TO GAME |
             //                         |     |       | LC(SPC)|    |     |     |     |
 
             bindings = <
 &kp ESC    &kp EXCL       &kp AT  &kp HASH   &kp DLLR   &kp PRCNT        &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp LNLCK
 &kp LCAPS  &trans         &trans  &kp GRAVE  &kp TILDE  &kp C_VOL_UP     &kp PLUS   &kp MINUS  &kp LBKT         &kp RBKT  &kp BSLH  &kp PSCRN
-&trans     &kp LC(LS(Z))  &trans  &kp CARET  &trans     &kp C_VOL_DN     &kp UNDER  &kp EQUAL  &kp LBRC         &kp RBRC  &kp PIPE  &tog 4
+&trans     &kp LC(LS(Z))  &trans  &kp CARET  &trans     &kp C_VOL_DN     &kp UNDER  &kp EQUAL  &kp LBRC         &kp RBRC  &kp PIPE  &to GAME
                                   &trans     &trans     &kp LC(SPACE)    &trans     &trans     &trans
             >;
         };
@@ -77,9 +78,14 @@
         };
 
         game_layer {
+            // -------------------------------------------------------------------------------------------------
+            // |  ESC     |  Q  |  W  |  E      |  R    |  T  |   |  *  |  7   |  8  |  9  |  +  |  F11        |
+            // | CTRL/TAB |  A  |  S  |  D      |  F    |  G  |   |  /  |  4   |  5  |  6  |  -  |  NMLK       |
+            // | SHFT     |  Z  |  X  |  C      |  V    |  B  |   | PGUP|  1   |  2  |  3  | PGDN|  TO DEFAULT |
+            //                        |  ALT    |  LGUI | SPC |   | BCPC|  =   |  0  |
             bindings = <
 &kp ESC        &kp Q  &kp W  &kp E     &kp R               &kp T        &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS    &kp F11
-&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F               &kp G        &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS   &kp F12
+&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F               &kp G        &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS   &kp LOCKING_NUM
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V               &kp B        &kp PAGE_UP      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PAGE_DOWN  &to 0
                              &kp LALT  &mt LEFT_GUI ENTER  &kp SPACE    &kp BSPC         &kp KP_EQUAL     &kp KP_NUMBER_0
             >;
