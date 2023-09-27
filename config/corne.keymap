@@ -78,10 +78,10 @@
 
         game_layer {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS    &kp F11
-&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G        &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS   &kp F12
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp PAGE_UP      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PAGE_DOWN  &tog 0
-                         &kp LGUI  &kp ENTER  &kp SPACE    &kp BSPC         &kp KP_EQUAL     &kp KP_NUMBER_0
+&kp ESC        &kp Q  &kp W  &kp E     &kp R               &kp T        &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS    &kp F11
+&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F               &kp G        &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS   &kp F12
+&kp LSHFT      &kp Z  &kp X  &kp C     &kp V               &kp B        &kp PAGE_UP      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PAGE_DOWN  &tog 0
+                             &kp LALT  &mt LEFT_GUI ENTER  &kp SPACE    &kp BSPC         &kp KP_EQUAL     &kp KP_NUMBER_0
             >;
         };
     };
