@@ -65,13 +65,13 @@
         davinci_layer {
             // ---------------------------------------------------------------------------------------------------------
             // |  ESC   |  F1 |  F2      | F3        |  F4     |   F5   |    | F6   |  F7  |  F8  |  F9  | F10  | F11  | 
-            // |  PS    |LC(S)| LC(LBRC) | LC(RBRC)  | LC(BSLH)| VOL_UP |    | DEL  |      |      |      |      | F12  |
+            // |  PS    |LC(S)| LC {     | LC }      | LC \    | VOL_UP |    | DEL  |      |      |      |      | F12  |
             // |        |LEFT | LS(LEFT) | LS(RIGHT) | RIGHT   | VOL_DN |    |LC(Z) |      |      |      |      | TO(1)|
             //                           | LALT      | SPACE   |        |    |LC(C) |LC(X) |LC(V) | 
 
             bindings = <
 &kp ESC    &kp F1     &kp F2        &kp F3         &kp F4        &kp F5          &kp F6     &kp F7     &kp F8     &kp F9  &kp F10  &kp F11
-&kp PSCRN  &kp LC(S)  &kp LC [      &kp LC ]       &kp LC(BSLH)  &kp C_VOL_UP    &kp DEL    &kp MINUS  &trans     &trans  &trans   &kp F12
+&kp PSCRN  &kp LC(S)  &kp LC(LBRC)  &kp LC(RBRC)   &kp LC(BSLH)  &kp C_VOL_UP    &kp DEL    &kp MINUS  &trans     &trans  &trans   &kp F12
 &trans     &kp LEFT   &kp LS(LEFT)  &kp LS(RIGHT)  &kp RIGHT     &kp C_VOL_DN    &kp LC(Z)  &kp EQUAL  &trans     &trans  &trans   &to DEFAULT
                                     &kp LALT       &kp SPACE     &trans          &kp LC(C)  &kp LC(X)  &kp LC(V)
             >;
