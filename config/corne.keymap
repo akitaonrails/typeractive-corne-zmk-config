@@ -85,7 +85,7 @@
             //                        |  ALT    |  LGUI | SPC |   | BCPC|  =   |  0  |
             bindings = <
 &kp ESC        &kp Q  &kp W  &kp E     &kp R               &kp T        &kp KP_MULTIPLY  &kp N7       &kp N8 &kp N9  &kp KP_PLUS    &kp F11
-&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F               &kp G        &kp KP_DIVIDE    &kp N4       &kp N5 &kp N6  &kp KP_MINUS   &kp ENT
+&mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F               &kp G        &kp KP_DIVIDE    &kp N4       &kp N5 &kp N6  &kp KP_MINUS   &kp RET
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V               &kp B        &kp DOT          &kp N1       &kp N2 &kp N3  &kp COMMA      &to 0
                              &kp LALT  &mt LEFT_GUI ENTER  &kp SPACE    &kp BSPC         &kp KP_EQUAL &kp KP_NUMBER_0
             >;
